@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "fingenius-ai-backend"
+version = "0.1.0"
+description = "FastAPI backend and AI engine for FinGenius AI"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.23"}
+asyncpg = "^0.28.0"
+pydantic-settings = "^2.1.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+celery = {extras = ["redis"], version = "^5.3.4"}
+redis = "^5.0.1"
+plaid-python = "^14.0.0"
+pandas = "^2.1.3"
+numpy = "^1.26.2"
+scikit-learn = "^1.3.2"
+python-multipart = "^0.0.6" # For form data in auth
+httpx = "^0.25.1" # For async http client in services
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+pytest-asyncio = "^0.21.1"
+alembic = "^1.12.1"
+ruff = "^0.1.7" # For linting
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
